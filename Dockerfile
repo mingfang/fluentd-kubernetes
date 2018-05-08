@@ -20,8 +20,6 @@ FROM base as build
 
 RUN apt-get install -y --no-install-recommends build-essential
 RUN curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
-RUN /usr/sbin/td-agent-gem install --no-ri --no-rdoc fluent-plugin-kafka 
-RUN /usr/sbin/td-agent-gem install --no-ri --no-rdoc zookeeper 
 RUN /usr/sbin/td-agent-gem install --no-ri --no-rdoc fluent-plugin-kubernetes_metadata_filter 
 RUN /usr/sbin/td-agent-gem install --no-ri --no-rdoc fluent-plugin-elasticsearch
 
